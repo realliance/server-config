@@ -1,0 +1,18 @@
+passwd:
+  users:
+    - name: ccatlett2000
+      ssh_authorized_keys:
+        - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOCXa0I1E/7tbQ2RzZ8WCBbfr5j53pLT4z2w/9CKDPLs
+      groups:
+        - wheel
+    - name: chris 
+      ssh_authorized_keys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDqnFSzHyyu7FE+4DR1MjDS/9EcYO1G3l8TmSvjG5nQ/bDSLKC4OAvYFYGOSFhqEbytBSg+geuarYe/hpoX6xwfHenpgscEH4F1pU3KkR3lqlsSyAf2RRTdGZbN2li4TPRPDUT6/7OmMglFiTz4J/X50Wbh1JB/8l/P4zXiBD1x3TzqhPv+d32VCEjBZ9lAHiFnas0E1aYaj77SLc0jvlj4m4YdRjIkHKmkH4GTWhKuDcs6f31VmXhYwFsaAhHe7TB0SysKPJjBcTaKIwSx1JlXQmphV7hQGfaaFHos0oRwjXH83imTTy12uKwtNkOwSzcbE9R7Mnxb+OW37jbZn3LV
+      groups:
+        - wheel
+update:
+  group: stable
+locksmith:
+  reboot_strategy: reboot
+  window_start: "05:00"
+  window_length: 1h
