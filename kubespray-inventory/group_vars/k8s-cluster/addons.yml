@@ -104,7 +104,7 @@ ingress_nginx_secure_port: 443
 ingress_nginx_configmap:
   hsts: "true"
   hsts-max-age: "63072000"
-  hsts-preload: "true"  ssl-protocols: "TLSv1.3"
+  hsts-preload: "true"
   server-snippet: |
     ssl_prefer_server_ciphers off;
   server-tokens: "false"
