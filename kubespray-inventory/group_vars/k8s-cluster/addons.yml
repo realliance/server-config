@@ -20,7 +20,7 @@ metrics_server_enabled: false
 
 # Rancher Local Path Provisioner
 local_path_provisioner_enabled: true
-local_path_provisioner_namespace: "local-path-storage"
+local_path_provisioner_namespace: "kube-system"
 local_path_provisioner_storage_class: "local-path"
 local_path_provisioner_reclaim_policy: Delete
 local_path_provisioner_claim_root: /opt/local-path-provisioner/
