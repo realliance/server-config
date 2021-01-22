@@ -13,7 +13,7 @@ registry_enabled: false
 # registry_disk_size: "10Gi"
 
 # Metrics Server deployment
-metrics_server_enabled: true
+metrics_server_enabled: false
 # metrics_server_kubelet_insecure_tls: true
 # metrics_server_metric_resolution: 60s
 # metrics_server_kubelet_preferred_address_types: "InternalIP"
@@ -84,7 +84,7 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: true
+ingress_nginx_enabled: false
 # ingress_nginx_host_network: false
 ingress_publish_status_address: ""
 # ingress_nginx_nodeselector:
@@ -98,21 +98,12 @@ ingress_publish_status_address: ""
 #     operator: "Equal"
 #     value: ""
 #     effect: "NoSchedule"
-ingress_nginx_namespace: "ingress-nginx"
-ingress_nginx_insecure_port: 80
-ingress_nginx_secure_port: 443
-ingress_nginx_configmap:
-  hsts: "true"
-  hsts-max-age: "63072000"
-  hsts-preload: "true"
-  server-snippet: |
-    ssl_prefer_server_ciphers off;
-  server-tokens: "false"
-  ssl-early-data: "false"
-  ssl-protocols: TLSv1.3
-  enable-brotli: "true"
-  use-geoip: "false"
-  use-geoip2: "false"
+# ingress_nginx_namespace: "ingress-nginx"
+# ingress_nginx_insecure_port: 80
+# ingress_nginx_secure_port: 443
+# ingress_nginx_configmap:
+#   map-hash-bucket-size: "128"
+#   ssl-protocols: "TLSv1.2 TLSv1.3"
 # ingress_nginx_configmap_tcp_services:
 #   9000: "default/example-go:8080"
 # ingress_nginx_configmap_udp_services:
@@ -134,15 +125,15 @@ ingress_alb_enabled: false
 # alb_ingress_aws_debug: "false"
 
 # Cert manager deployment
-cert_manager_enabled: true
-cert_manager_namespace: "cert-manager"
+cert_manager_enabled: false
+# cert_manager_namespace: "cert-manager"
 
 # MetalLB deployment
-metallb_enabled: true
-metallb_ip_range:
-  - "104.168.45.230-104.168.45.238"
+metallb_enabled: false
+# metallb_ip_range:
+#   - "10.5.0.50-10.5.0.99"
 # metallb_version: v0.9.3
-metallb_protocol: "layer2"
+# metallb_protocol: "layer2"
 # metallb_port: "7472"
 # metallb_limits_cpu: "100m"
 # metallb_limits_mem: "100Mi"

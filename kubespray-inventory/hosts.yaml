@@ -1,19 +1,19 @@
 all:
   hosts:
-    node1:
-      ansible_host: 104.168.45.226
-      ip: 104.168.45.226
-      access_ip: 104.168.45.226
+    albert:
+      ansible_host: 192.168.122.222
+      ip: 192.168.122.222
+      access_ip: 192.168.122.222
   children:
     kube-master:
       hosts:
-        node1:
+        albert:
     kube-node:
       hosts:
-        node1:
+        albert:
     etcd:
       hosts:
-        node1:
+        albert:
     k8s-cluster:
       children:
         kube-master:
