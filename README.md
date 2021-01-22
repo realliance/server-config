@@ -15,6 +15,11 @@ flatcar-install -d /dev/<disk> -i ignition.json
 
 4. (Optional) Setup python virtual environment
 
+```shell
+python3 -m venv ~/path/to/venv
+source ~/path/to/venv/bin/activate
+```
+
 5. (Optional) Install and setup mitogen
 
 ```shell
