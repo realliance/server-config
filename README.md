@@ -23,16 +23,17 @@ source ~/path/to/venv/bin/activate
 5. (Optional) Install and setup mitogen
 
 ```shell
+pip3 install -r kubespray/requirements.txt
 ansible-playbook kubespray/mitogen.yml
 ```
 
-5. Run kubespray
+6. Run kubespray (skip first command if did it already in step 5)
 
 ```shell
 pip3 install -r kubespray/requirements.txt
 ansible-playbook -i kubespray-inventory/hosts.yaml --become --become-user=root kubespray/cluster.yml
 ```
-6. Install flux (requires `flux` tool, `flux-bin` on AUR)
+7. Install flux (requires `flux` tool, `flux-bin` on AUR)
 
 ```shell
 export GITHUB_USER=realliance-cd
