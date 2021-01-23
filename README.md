@@ -42,5 +42,5 @@ ansible-playbook -i kubespray-inventory/hosts.yaml --become --become-user=root k
 ```shell
 export GITHUB_USER=realliance-cd
 export GITHUB_TOKEN=<token>
-flux bootstrap github --owner=realliance --repository=k8s-config --branch=main --team=infrastructure --private=false
+flux bootstrap github --owner=realliance --repository=k8s-config --branch=main --team=infrastructure --private=false --components-extra=image-reflector-controller,image-automation-controller
 ```
